@@ -34,5 +34,9 @@
     {
         "ParameterKey": "myKeyPair",
         "ParameterValue": "virginia-staging"
+    },
+    {
+        "ParameterKey": "ProfileWithRolesForOurApp",
+        "ParameterValue": "s3-accessor"
     }
 ]

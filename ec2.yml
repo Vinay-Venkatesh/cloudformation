@@ -29,6 +29,9 @@ Parameters:
     myKeyPair:
         Description: KeyPair for Ec2
         Type: String
+    ProfileWithRolesForOurApp:
+        Description: Role Name
+        Type: String
 Mappings:
   RegionMap:
     us-east-1:
@@ -167,7 +170,7 @@ Resources:
         - RegionMap
         - !Ref AWS::Region
         - AMI
-      #IamInstanceProfile: !Ref ProfileWithRolesForOurApp
+      IamInstanceProfile: !Ref ProfileWithRolesForOurApp
       UserData:
         'Fn::Base64': 
           !Sub |
